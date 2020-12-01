@@ -28,7 +28,7 @@ namespace SeleniumLib
         /// Click into a button, checkbox, option etc
         /// </summary>
         /// <param name="element"></param>
-        public static void Clicks(this IWebElement element)
+        public static void Click(this IWebElement element)
         {
             element.Click();
         }

@@ -30,24 +30,6 @@ namespace SeleniumLib
             }
         }
 
-        /// <summary>
-        /// Sprawdza czy element istnieje.
-        /// </summary>
-        /// <param name="by"></param>
-        /// <returns>True jeśli element istnieje na aktualnej stronie.</returns>
-        public static bool IsElementPresent(this RemoteWebDriver driver, By by)
-        {
-            try
-            {
-                driver.FindElement(by);
-                return true;
-            }
-            catch (NoSuchElementException)
-            {
-                return false;
-            }
-        }
-
         public static void GoToPage<T>(this INavigation navigation) where T : IPageObject
         {
             var pageType = typeof(T);
